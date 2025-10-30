@@ -1,6 +1,5 @@
 <?php
 
-<?php
 $host = 'your-railway-host';  // จาก Railway
 $dbname = 'your-railway-dbname';
 $usernamedb = 'your-railway-username';
