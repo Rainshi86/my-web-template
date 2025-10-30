@@ -1,0 +1,307 @@
+/* ส่วนค้นหาห้องพัก */
+.search {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.search form {
+    display: grid;
+    gap: 1.5em;
+    justify-items: center;
+}
+
+.search label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.search input {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.search input:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+.search button {
+    padding: 0.8em;
+    font-size: 1.1em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #45a049;
+}
+
+/* Style for Navbar แรก */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+/* สไตล์ Navbar แรก */
+.navbar1 {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar1 a {
+    color: black;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.navbar1 a:hover {
+    color: #007BFF;
+}
+
+/* สไตล์ Navbar สอง */
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 40px;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* โลโก้และชื่อเว็บไซต์ */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* ขนาดโลโก้ */
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* ลิงก์ใน Navbar */
+.navbar2 a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.navbar2 a:hover {
+    color: #007BFF;
+}
+
+/* Responsive Design สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    .navbar1, .navbar2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar2 a {
+        margin: 5px 0;
+    }
+
+    .navbar-left {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Style for Room Image */
+.room-image {
+    text-align: center;
+    /* margin: 20px 0; */
+}
+
+.room-image img {
+    width: 100%;               /* กำหนดความกว้างของภาพ */
+    height: 750px;             /* กำหนดความสูงของภาพ (จะทำการ crop ส่วนที่เกิน) */
+    overflow: hidden;          /* ซ่อนส่วนที่เกินออกจากกรอบ */
+    object-fit: cover; 
+}
+
+/* Style for Booking Section */
+.booking {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    position: absolute; /* ทำให้ฟอร์มอยู่เหนือภาพ */
+    top: 50%; /* จัดตำแหน่งให้ฟอร์มอยู่ตรงกลางภาพในแนวตั้ง */
+    left: 50%; /* จัดตำแหน่งให้ฟอร์มอยู่ตรงกลางภาพในแนวนอน */
+    transform: translate(-50%, 240%); /* ใช้เพื่อปรับให้ฟอร์มอยู่ตรงกลางอย่างสมบูรณ์ */
+    padding: 20px;
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 8px; /* ทำให้มุมฟอร์มโค้ง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ฟอร์ม */
+    z-index: 10; /* ทำให้ฟอร์มอยู่เหนือรูปภาพ */
+}
+
+.booking h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.booking form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking input {
+    padding: 10px;
+    margin: 0 10px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking button:hover {
+    background-color: #218838;
+}
+
+/* style for welcome */
+.welcome{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 30%;
+}
+    
+.welcome h2{
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.welcome p{
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+/* style for about us */
+.about_us{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: -140px;
+}
+
+.grid1{
+    text-align: left;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 30%;
+}
+.grid2{
+    margin: 0;
+    padding: 0;
+    height: 750px;             /* กำหนดความสูงของภาพ (จะทำการ crop ส่วนที่เกิน) */
+    overflow: hidden;          /* ซ่อนส่วนที่เกินออกจากกรอบ */
+
+}
+
+/* Style for Our Rooms Section */
+.our-rooms {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 30%;
+}
+
+.our-rooms h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.our-rooms p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.room-gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.room-gallery img {
+    margin: 0 10px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.footer {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

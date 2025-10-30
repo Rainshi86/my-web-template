@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ - ระบบจองห้องพัก</title>
+    <link rel="stylesheet" href="lr_styles.css">
+</head>
+<body class="body">
+    <header class="header">
+        <h1>เข้าสู่ระบบ</h1>
+    </header>
+
+    <main class="centered-container">
+        <section class="form-section">
+            <h2>กรอกข้อมูลเข้าสู่ระบบ</h2>
+            <form action="login.php" method="post">
+                <label for="username">ชื่อผู้ใช้งาน:</label>
+                <input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้งาน" required autocomplete="off">
+
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" placeholder="กรอกรหัสผ่าน" required autocomplete="off">
+                      
+                <button type="submit">เข้าสู่ระบบ</button>
+            </form>
+            
+            <p>หากยังไม่ได้สมัครสมาชิก, <a href="register.html">สมัครสมาชิกที่นี่</a></p>
+
+        </section>
+    </main>
+</body>
+</html>

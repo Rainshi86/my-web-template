@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ค้นหาห้องพัก</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>ค้นหาห้องพัก</h1>
+            <nav class="nav">
+                <a href="index.html">หน้าแรก</a>
+                <a href="login.html">เข้าสู่ระบบ</a>
+                <a href="register.html">สมัครสมาชิก</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ส่วนค้นหาห้องพัก -->
+        <section class="search">
+            <h2>ค้นหาห้องพัก</h2>
+            <form>
+                <label for="checkin">วันที่เช็คอิน:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                
+                <label for="checkout">วันที่เช็คเอาท์:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                
+                <label for="guests">จำนวนผู้เข้าพัก:</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" value="1">
+                
+                <button type="submit">ค้นหา</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 ระบบจองห้องพัก. สงวนลิขสิทธิ์.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* Style for Navbar แรก */
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+/* สไตล์ Navbar แรก */
+.navbar1 {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar1 a {
+    color: black;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.navbar1 a:hover {
+    color: #007BFF;
+}
+
+/* สไตล์ Navbar สอง */
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 40px;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* โลโก้และชื่อเว็บไซต์ */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* ขนาดโลโก้ */
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* ลิงก์ใน Navbar */
+.navbar2 a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.navbar2 a:hover {
+    color: #007BFF;
+}
+
+/* Responsive Design สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    .navbar1, .navbar2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar2 a {
+        margin: 5px 0;
+    }
+
+    .navbar-left {
+        margin-bottom: 10px;
+    }
+}
+
+.footer {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.room-details-container h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roomsub{
+    display: flex;
+    gap: 15px; /* ระยะห่างระหว่าง h2 */
+
+}
+
+.room-image{
+    text-align: center;
+}
+
+.room-image img{
+    width: 60%; /* ลดขนาดเหลือ 50% ของขนาดต้นฉบับ */
+    height: 50%; 
+    height: 500px;
+}
+
+/* Style for Booking Section */
+.booking {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    position: absolute; /* ทำให้ฟอร์มอยู่เหนือภาพ */
+    top: 50%; /* จัดตำแหน่งให้ฟอร์มอยู่ตรงกลางภาพในแนวตั้ง */
+    left: 50%; /* จัดตำแหน่งให้ฟอร์มอยู่ตรงกลางภาพในแนวนอน */
+    transform: translate(-50%, 240%); /* ใช้เพื่อปรับให้ฟอร์มอยู่ตรงกลางอย่างสมบูรณ์ */
+    padding: 20px;
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 8px; /* ทำให้มุมฟอร์มโค้ง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ฟอร์ม */
+    z-index: 10; /* ทำให้ฟอร์มอยู่เหนือรูปภาพ */
+    width: 55%;
+    margin-top: -60px;
+}
+
+.booking h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.booking form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking input {
+    padding: 10px;
+    margin: 0 10px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking button:hover {
+    background-color: #218838;
+}
+
+.room-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    padding-top: 50px;
+}

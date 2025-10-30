@@ -1,0 +1,247 @@
+/* Style for Navbar แรก */
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+/* สไตล์ Navbar แรก */
+.navbar1 {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar1 a {
+    color: black;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.navbar1 a:hover {
+    color: #007BFF;
+}
+
+/* สไตล์ Navbar สอง */
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 40px;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* โลโก้และชื่อเว็บไซต์ */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* ขนาดโลโก้ */
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* ลิงก์ใน Navbar */
+.navbar2 a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.navbar2 a:hover {
+    color: #007BFF;
+}
+
+/* Responsive Design สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    .navbar1, .navbar2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar2 a {
+        margin: 5px 0;
+    }
+
+    .navbar-left {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Style for Room Image */
+.room-image {
+    text-align: center;
+    /* margin: 20px 0; */
+}
+
+.room-image img {
+    width: 100%;               /* กำหนดความกว้างของภาพ */
+    height: 400px;             /* กำหนดความสูงของภาพ (จะทำการ crop ส่วนที่เกิน) */
+    overflow: hidden;          /* ซ่อนส่วนที่เกินออกจากกรอบ */
+    object-fit: cover; 
+}
+.footer {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* fillter ห้องพัก */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters select,
+.filters input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.filters input {
+    width: 90px;
+}
+
+/* รายการห้องพัก */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 20px;
+}
+
+.room-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+.room-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-card .room-details {
+    padding: 15px;
+}
+
+.room-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.room-card p {
+    margin: 0 0 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.room-card .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.room-card button {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #28a745;
+    transition: background-color 0.2s;
+}
+
+.room-card button:hover {
+    background-color: #218838;
+}
+
+.room-card a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.room-card a:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+.pagination button.active {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.roomname{
+    color: red;
+}

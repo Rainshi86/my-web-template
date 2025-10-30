@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก - ระบบจองห้องพัก</title>
+    <link rel="stylesheet" href="lr_styles.css">
+</head>
+<body class="body">
+    <header class="header">
+        <h1>สมัครสมาชิก</h1>
+    </header>
+
+    <main class="centered-container">
+        <section class="form-section">
+            <h2>กรอกข้อมูลสำหรับสมัครสมาชิก</h2>
+            <form action="register.php" method="post" onsubmit="return validateForm()">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="กรอกอีเมลล์ผู้ใช้งาน" required autocomplete="off">
+
+                <label for="username">ชื่อผู้ใช้งาน:</label>
+                <input type="text" id="username" name="username" placeholder="กรอกผู้ใช้งาน" required autocomplete="off">
+
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" placeholder="กรอกรหัสผ่าน" required autocomplete="new-password">
+
+                <label for="confirmpassword">ยืนยันรหัสผ่าน:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="กรอกรหัสผ่านการยืนยัน" required autocomplete="new-password">
+
+                <button type="submit">สมัครสมาชิก</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmpassword = document.getElementById("confirmpassword").value;
+
+            if (password !== confirmpassword) {
+                alert("รหัสผ่านและยืนยันรหัสผ่านไม่ตรงกัน");
+                return false; // หยุดการส่งฟอร์ม
+            }
+            return true; // ส่งฟอร์มได้
+        }
+    </script>
+</body>
+</html>

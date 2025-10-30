@@ -1,0 +1,272 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+form button {
+    background-color: #27ae60;
+}
+
+form button:hover {
+    background-color: #2ecc71;
+}
+
+form button[name="delete"] {
+    background-color: #e74c3c;
+}
+
+form button[name="delete"]:hover {
+    background-color: #c0392b;
+}
+
+/*  */
+/* Layout for the form elements */
+.form-container input,
+.form-container select,
+.form-container button {
+    width: 100%; /* ให้แต่ละฟอร์มเต็มขนาด */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ให้ select ชั้นเหมือน input */
+.form-container input[type="number"][name="floor"] {
+    display: block; /* ให้มันแสดงในบรรทัดใหม่ */
+    width: 100%; /* ให้ช่องกรอกข้อมูลเต็มขนาด */
+    padding: 10px;
+}
+
+/* ปรับรูปภาพให้อยู่บรรทัดใหม่ */
+.form-container input[type="file"] {
+    display: block; /* ให้มันแสดงในบรรทัดใหม่ */
+    width: 100%; /* ให้ช่องกรอกรูปเต็มขนาด */
+    margin-bottom: 10px;
+}
+
+/* ปุ่ม เพิ่มห้อง และ Home ให้อยู่บรรทัดใหม่ */
+.form-container button,
+.form-container .home {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.form-container .home {
+    background-color: #f44336; /* สีสำหรับปุ่มหน้าหลัก */
+}
+
+.form-container button:hover,
+.form-container .home:hover {
+    opacity: 0.8; /* เปลี่ยนแปลงความโปร่งใสเมื่อ hover */
+}
+
+/* ทำให้ตารางมีระยะห่างระหว่างแถว */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.form-container textarea {
+    width: 100%; /* ให้กว้างเต็มช่อง */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 120px; /* กำหนดความสูงให้เหมาะสม */
+    box-sizing: border-box; /* ป้องกันการทับซ้อนของ padding และ border */
+}
+/*  */
+/* ตั้งค่าพื้นฐานสำหรับทุกอย่าง */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ตั้งค่าพื้นหลังและสีตัวอักษร */
+body {
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+/* คอนเทนเนอร์หลัก */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* หัวเรื่อง */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* ฟอร์มการเพิ่มข้อมูล */
+form {
+    margin-bottom: 20px;
+}
+
+/* สไตล์สำหรับ input และ select */
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ปุ่มการทำงาน */
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* การตั้งค่าสำหรับตาราง */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* สไตล์สำหรับหัวข้อในตาราง */
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+/* เปลี่ยนสีแถวเมื่อ hover */
+table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* ปุ่มในฟอร์ม */
+form button {
+    background-color: #27ae60;
+}
+
+form button:hover {
+    background-color: #2ecc71;
+}
+
+/* ปุ่มลบในฟอร์ม */
+form button[name="delete"] {
+    background-color: #e74c3c;
+}
+
+form button[name="delete"]:hover {
+    background-color: #c0392b;
+}

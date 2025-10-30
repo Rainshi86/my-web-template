@@ -1,0 +1,231 @@
+/* สไตล์ Navbar แรก */
+.navbar1 {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar1 a {
+    color: black;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.navbar1 a:hover {
+    color: #007BFF;
+}
+
+/* สไตล์ Navbar สอง */
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 40px;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* โลโก้และชื่อเว็บไซต์ */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* ขนาดโลโก้ */
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* ลิงก์ใน Navbar */
+.navbar2 a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.navbar2 a:hover {
+    color: #007BFF;
+}
+
+/* Responsive Design สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    .navbar1, .navbar2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar2 a {
+        margin: 5px 0;
+    }
+
+    .navbar-left {
+        margin-bottom: 10px;
+    }
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.left-section, .right-section {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    width: 70%;
+}
+
+.right-section {
+    width: 30%;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: none;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.right-section p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.right-section input {
+    margin-top: 10px;
+}
+
+.right-section button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.right-section button:hover {
+    background-color: #218838;
+}
+
+button[type="submit"] {
+    margin-top: 20px; /* เพิ่มพื้นที่ระหว่างปุ่มและฟอร์ม */
+    padding: 10px 20px; /* ขนาดปุ่ม */
+    background-color: #4CAF50; /* สีพื้นหลังปุ่ม */
+    color: white; /* สีข้อความในปุ่ม */
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* เปลี่ยนสีเมื่อเลื่อนเมาส์ไปบนปุ่ม */
+}
+
+.select-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.select-container input {
+    width: 100%;
+    padding: 8px 35px 8px 10px; /* ด้านซ้าย 10px */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    text-align: left; /* ชิดซ้าย */
+    box-sizing: border-box;
+}
+
+.select-container select {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none; /* ซ่อน select */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    z-index: 10;
+}
+
+.select-container.show select {
+    display: block; /* แสดง select เมื่อคลิก */
+}
+
+.select-container .dropdown-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
