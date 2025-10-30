@@ -1,9 +1,9 @@
 <?php
 
-$host = 'your-railway-host';  // จาก Railway
-$dbname = 'your-railway-dbname';
-$usernamedb = 'your-railway-username';
-$password = 'your-railway-password';
+$host = 'mysql.railway.internal';  // จาก Railway
+$dbname = '';
+$usernamedb = 'root';
+$password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $usernamedb, $password);
