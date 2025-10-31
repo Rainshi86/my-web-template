@@ -1,18 +1,15 @@
 <?php
+$host = getenv('MYSQLHOST');
+$user = getenv('MYSQLUSER');
+$pass = getenv('MYSQLPASSWORD');
+$db   = getenv('MYSQLDATABASE');
+$port = getenv('MYSQLPORT');
 
-$host = 'mysql.railway.internal';  // จาก Railway
-$dbname = '';
-$usernamedb = 'root';
-$password = '';
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $usernamedb, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // echo "เชื่อมต่อฐานข้อมูลสำเร็จ";
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-    die();
+$conn = new mysqli($host, $user, $pass, $db, $port);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+// echo "Connected successfully";
 ?>
 
 // $host = 'localhost';  // Host
