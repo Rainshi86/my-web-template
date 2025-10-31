@@ -13,6 +13,7 @@ session_start();  // เริ่มต้น session
 
 // เชื่อมต่อฐานข้อมูล
 require_once 'db.php'; // เชื่อมต่อกับไฟล์ฐานข้อมูล
+include 'db.php';
 
 // ตรวจสอบว่า user ถูกตั้งค่าหรือไม่ใน session
 $is_logged_in = isset($_SESSION['user']); // ถ้าล็อกอินจะเป็น true
