@@ -19,4 +19,8 @@ My SQL
 โปรแกรมจำลองการสร้างเว็บเซิร์ฟเวอร์เสมือนในเครื่องคอมพิวเตอร์
 XAMPP Apache 
 
+ตัวอย่างเว็บไซต์ Niphonproject.great-site.net
+Admin user
+User: if0_40307194
+Password: 1234
         
